@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
-// same inline theme
+// inline theme (same as your LoginPage)
 const theme = createTheme({
   palette: {
     mode: 'light',
@@ -60,12 +60,13 @@ export default function SignupPage({ onSignup }) {
     e.preventDefault();
     setError('');
     try {
-      const { data } = await axios.post('/api/signup', { username, password });
-      onSignup({ id: data.userId, username: data.username });
+      const { data } = await axios.post('/api/signup', { username, password }, { withCredentials: true });
+      // call the callback your parent actually provided
+      onSignup && onSignup({ id: data.userId, username: data.username });
       navigate('/dashboard');
     } catch (err) {
       console.error('Signup failed:', err.response?.data || err.message);
-      setError('Signup failed. Please check your inputs.');
+      setError(err.response?.data?.error || 'Signup failed. Please try again.');
     }
   };
 

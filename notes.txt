@@ -1,7 +1,7 @@
 database details:
-
+server name: mywebapp-sqlserver-unique123
 user: azureuser
-pass: -kL#~}d;px2Zjp2
+pass: London2025
 ADO.NET : connection string: Server=tcp:my-sql-server-tecknuovo.database.windows.net,1433;Initial Catalog=mydatabase;Persist Security Info=False;User ID=azureuser;Password=-kL#~}d;px2Zjp2;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
 ODBC : Connection string: Driver={ODBC Driver 18 for SQL Server};Server=tcp:my-sql-server-tecknuovo.database.windows.net,1433;Database=mydatabase;Uid=azureuser;Pwd=-kL#~}d;px2Zjp2;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
 web server details:
