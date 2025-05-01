@@ -1,0 +1,14 @@
+database details:
+
+user: azureuser
+pass: -kL#~}d;px2Zjp2
+ADO.NET : connection string: Server=tcp:my-sql-server-tecknuovo.database.windows.net,1433;Initial Catalog=mydatabase;Persist Security Info=False;User ID=azureuser;Password=-kL#~}d;px2Zjp2;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+ODBC : Connection string: Driver={ODBC Driver 18 for SQL Server};Server=tcp:my-sql-server-tecknuovo.database.windows.net,1433;Database=mydatabase;Uid=azureuser;Pwd=-kL#~}d;px2Zjp2;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
+web server details:
+
+user:aliali_webadmin
+pass:-kL#~}d;px2Zjp2
+
+
+key:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsbotp7I1zEF6ziBwEuOsLafVBsFahpyK9yJMvX18fwDWIhIohwJJYUGqC2B2W1bqSmhPX6+KYEOm2kex6ehvrdulX0YEEY8fcc8xRCbDZeGZ1QXR1ipKAEHpaj+MJ1NMiLsXui7X6qa9lWn1aSGokxIL6v7LsocM+96X1MkmyuHJTVDXwqqQycNfwyJHsX4DLJvs3tOZflg+BGDBnAdbnKh44Ek85CEn27G54kAwiF8rwOLXNmNjz8PwCqbun7n2Jms5v9u3iZtqcY4ZCHybyNuoKJYJoh6FqSHiimA1SYKKe/pDfjGZtcaWhhUc/IC+TlJR2IrBD0cVEgxRnZfcj rsa-key-20250429

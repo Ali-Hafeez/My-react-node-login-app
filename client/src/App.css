@@ -1,0 +1,84 @@
+/* App.css */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f4f6f9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures the content is centered vertically */
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+button {
+  border-radius: 8px;
+  padding: 0.8em 1.5em;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+button:hover {
+  background-color: #535bf2;
+  transform: scale(1.05);
+}
+
+input {
+  padding: 0.8em;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border: 1px solid #646cff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #646cff;
+  font-weight: bold;
+}
+a:hover {
+  color: #535bf2;
+}
