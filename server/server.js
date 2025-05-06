@@ -8,6 +8,8 @@ const sql = require('mssql'); // The driver for MS SQL Server / Azure SQL
 const app = express(); // Create an instance of the Express application
 const port = process.env.PORT || 3001; // Use port from .env or default to 3001
 const saltRounds = 10; // Cost factor for bcrypt hashing (higher is slower but more secure)
+const rateLimit = require('express-rate-limit'); // Protect against brute force
+const helmet = require('helmet'); // Secure headers
 
 // --- Database Configuration (Extracted from Connection String) ---
 // It's cleaner to parse the string or use separate env vars if preferred
@@ -61,6 +63,18 @@ async function connectDb() {
     }
 }
 connectDb(); // Initialize the connection pool when the application starts
+// --- Security Middleware Additions ---
+
+// Set various secure HTTP headers
+app.use(helmet());
+
+// Limit repeated requests to public APIs and auth endpoints (basic protection)
+const apiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // Limit each IP to 100 requests per windowMs
+    message: { error: 'Too many requests, please try again later.' }
+});
+app.use('/api/', apiLimiter);
 
 // --- Middleware Setup ---
 // --- Middleware Setup ---
@@ -252,6 +266,10 @@ app.post('/api/logout', (req, res) => {
         res.status(200).json({ message: 'No active session to log out from.' });
     }
 });
+
+app.get('/', (req, res) => {
+    res.send('API is running.');
+  });
 
 // --- Start Server ---
 app.listen(port, () => {
