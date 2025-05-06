@@ -82,7 +82,8 @@ export default function DashboardPage({ user, onLogout }) {
               {user && (
                 <Grow in timeout={1800}>
                   <Typography variant="body2" sx={{ mt: 3 }}>
-                    Logged in as: <strong>{user.username}</strong>
+                    Loading...
+                    {/* Logged in as: <strong>{user.username}</strong> */}
                   </Typography>
                 </Grow>
               )}
